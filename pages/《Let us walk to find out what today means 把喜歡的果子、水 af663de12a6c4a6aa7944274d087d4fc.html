@@ -1,0 +1,687 @@
+<html><head><link rel="stylesheet" href="styles.css"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>《Let us walk to find out what today means / 把喜歡的果子、水、花、葉子帶給身邊的你》</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="af663de1-2a6c-4a6a-a794-4274d087d4fc" class="page sans"><header><h1 class="page-title"><strong>《Let us walk to find out what today means / 把喜歡的果子、水、花、葉子帶給身邊的你》</strong></h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-date"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesDate"><path d="M3.29688 14.4561H12.7031C14.1797 14.4561 14.9453 13.6904 14.9453 12.2344V3.91504C14.9453 2.45215 14.1797 1.69336 12.7031 1.69336H3.29688C1.82031 1.69336 1.05469 2.45215 1.05469 3.91504V12.2344C1.05469 13.6973 1.82031 14.4561 3.29688 14.4561ZM3.27637 13.1162C2.70898 13.1162 2.39453 12.8154 2.39453 12.2207V5.9043C2.39453 5.30273 2.70898 5.00879 3.27637 5.00879H12.71C13.2842 5.00879 13.6055 5.30273 13.6055 5.9043V12.2207C13.6055 12.8154 13.2842 13.1162 12.71 13.1162H3.27637ZM6.68066 7.38086H7.08398C7.33008 7.38086 7.41211 7.30566 7.41211 7.05957V6.66309C7.41211 6.41699 7.33008 6.3418 7.08398 6.3418H6.68066C6.44141 6.3418 6.35938 6.41699 6.35938 6.66309V7.05957C6.35938 7.30566 6.44141 7.38086 6.68066 7.38086ZM8.92285 7.38086H9.31934C9.56543 7.38086 9.64746 7.30566 9.64746 7.05957V6.66309C9.64746 6.41699 9.56543 6.3418 9.31934 6.3418H8.92285C8.67676 6.3418 8.59473 6.41699 8.59473 6.66309V7.05957C8.59473 7.30566 8.67676 7.38086 8.92285 7.38086ZM11.1582 7.38086H11.5547C11.8008 7.38086 11.8828 7.30566 11.8828 7.05957V6.66309C11.8828 6.41699 11.8008 6.3418 11.5547 6.3418H11.1582C10.9121 6.3418 10.8301 6.41699 10.8301 6.66309V7.05957C10.8301 7.30566 10.9121 7.38086 11.1582 7.38086ZM4.44531 9.58203H4.84863C5.09473 9.58203 5.17676 9.50684 5.17676 9.26074V8.86426C5.17676 8.61816 5.09473 8.54297 4.84863 8.54297H4.44531C4.20605 8.54297 4.12402 8.61816 4.12402 8.86426V9.26074C4.12402 9.50684 4.20605 9.58203 4.44531 9.58203ZM6.68066 9.58203H7.08398C7.33008 9.58203 7.41211 9.50684 7.41211 9.26074V8.86426C7.41211 8.61816 7.33008 8.54297 7.08398 8.54297H6.68066C6.44141 8.54297 6.35938 8.61816 6.35938 8.86426V9.26074C6.35938 9.50684 6.44141 9.58203 6.68066 9.58203ZM8.92285 9.58203H9.31934C9.56543 9.58203 9.64746 9.50684 9.64746 9.26074V8.86426C9.64746 8.61816 9.56543 8.54297 9.31934 8.54297H8.92285C8.67676 8.54297 8.59473 8.61816 8.59473 8.86426V9.26074C8.59473 9.50684 8.67676 9.58203 8.92285 9.58203ZM11.1582 9.58203H11.5547C11.8008 9.58203 11.8828 9.50684 11.8828 9.26074V8.86426C11.8828 8.61816 11.8008 8.54297 11.5547 8.54297H11.1582C10.9121 8.54297 10.8301 8.61816 10.8301 8.86426V9.26074C10.8301 9.50684 10.9121 9.58203 11.1582 9.58203ZM4.44531 11.7832H4.84863C5.09473 11.7832 5.17676 11.708 5.17676 11.4619V11.0654C5.17676 10.8193 5.09473 10.7441 4.84863 10.7441H4.44531C4.20605 10.7441 4.12402 10.8193 4.12402 11.0654V11.4619C4.12402 11.708 4.20605 11.7832 4.44531 11.7832ZM6.68066 11.7832H7.08398C7.33008 11.7832 7.41211 11.708 7.41211 11.4619V11.0654C7.41211 10.8193 7.33008 10.7441 7.08398 10.7441H6.68066C6.44141 10.7441 6.35938 10.8193 6.35938 11.0654V11.4619C6.35938 11.708 6.44141 11.7832 6.68066 11.7832ZM8.92285 11.7832H9.31934C9.56543 11.7832 9.64746 11.708 9.64746 11.4619V11.0654C9.64746 10.8193 9.56543 10.7441 9.31934 10.7441H8.92285C8.67676 10.7441 8.59473 10.8193 8.59473 11.0654V11.4619C8.59473 11.708 8.67676 11.7832 8.92285 11.7832Z"></path></svg></span>Date</th><td><time>@May 7, 2023</time></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><img src="https://www.notion.so/icons/tag_gray.svg" style="width:14px;height:14px"/></span>Tags</th><td><span class="selected-value select-value-color-default">Black/White</span><span class="selected-value select-value-color-pink">StableDiffusion</span><span class="selected-value select-value-color-gray">graphics tablet</span><span class="selected-value select-value-color-brown">photoshop</span></td></tr></tbody></table></header><div class="page-body"><p id="3fe205e9-88f8-41e9-8c8c-0ba7b8b55a28" class="">《Let us walk to find out what today means / 把喜歡的果子、水、花、葉子帶給身邊的你》</p><p id="d15a6ded-5a6a-4b39-b535-3d5de8a4d41a" class="">png , 15000 x 3000 , 2023</p><p id="ef770766-0f60-4a89-a590-b124cd8364b9" class="">
+</p><figure id="8be4b428-84ee-4a2d-902e-d94d323a3b0a" class="image"><a href="%E3%80%8ALet%20us%20walk%20to%20find%20out%20what%20today%20means%20%E6%8A%8A%E5%96%9C%E6%AD%A1%E7%9A%84%E6%9E%9C%E5%AD%90%E3%80%81%E6%B0%B4%20af663de12a6c4a6aa7944274d087d4fc/Untitled%205.png"><img style="width:1728px" src="%E3%80%8ALet%20us%20walk%20to%20find%20out%20what%20today%20means%20%E6%8A%8A%E5%96%9C%E6%AD%A1%E7%9A%84%E6%9E%9C%E5%AD%90%E3%80%81%E6%B0%B4%20af663de12a6c4a6aa7944274d087d4fc/Untitled%205.png"/></a></figure>
+<p id="be5c250b-a2ee-489c-a037-ebbd76708645" class="">這次的創作動機起於我從薄伽梵歌中得到表達感謝的靈感，覺得其實我需要的一直都以各種的面貌存在我的生活中，希望能分享我遇到的開心給身邊的人，如同生活中的食物、水、花、葉子，都帶給我許多的滿足與感激。我有時會想，會不會那些我以為開心的事，其實都很奇怪，但我還是想跟你們分享，也謝謝你們聽我分享也都很開心。<br/>I was inspired by the Bhagavad Gita to express my gratitude and felt that what I needed was always present in my life in various forms, and I wanted to share the happiness I found with those around me, just as the food, water, flowers and leaves in my life bring me so much satisfaction and gratitude. I sometimes wonder if the things I think are happy are actually strange, but I still want to share them with you, and thank you for sharing happiness together.<br/></p><p id="c2f02f6d-1249-476b-853e-d6f81a0d3c65" class="">
+</p><figure id="5f5498cb-7cba-413d-9ebd-bdf4d3085d46" class="image"><a href="%E3%80%8ALet%20us%20walk%20to%20find%20out%20what%20today%20means%20%E6%8A%8A%E5%96%9C%E6%AD%A1%E7%9A%84%E6%9E%9C%E5%AD%90%E3%80%81%E6%B0%B4%20af663de12a6c4a6aa7944274d087d4fc/Untitled.png"><img style="width:1728px" src="%E3%80%8ALet%20us%20walk%20to%20find%20out%20what%20today%20means%20%E6%8A%8A%E5%96%9C%E6%AD%A1%E7%9A%84%E6%9E%9C%E5%AD%90%E3%80%81%E6%B0%B4%20af663de12a6c4a6aa7944274d087d4fc/Untitled.png"/></a></figure><p id="2ed2aa8c-2d4e-40db-8c53-8313d748aa8c" class="">
+</p><p id="f89d3e72-1b28-4ab7-8880-532afc2b82a9" class="">製作的流程是先使用電繪板繪製符號（平常是手繪於便條紙），然後使用Stable Diffusion產生果、水、花、葉的素材，並挑選合適的素材訓練LoRA，共訓練出四個LoRA。使用sd的img2img和訓練出來的LoRA生成畫面，最後決定採用由左至右共有五個畫面的作品構圖，最左邊是我繪製的符號原圖，然後依序是由AI所聯想的果、水、花、葉，透過這個構圖呈現與AI共同創作的過程。<br/>The creative process involved first using a digital drawing tablet to create Asemic (usually hand-drawn on sticky notes), then using Stable Diffusion to generate materials for fruits, water, flowers, and leaves, and selecting suitable materials to train LoRA. Four LoRAs were trained in total. By the img2img function of SD and the trained LoRA were used to generate the final images. The composition of the artwork consists of five frames from left to right. The leftmost frame is the original one drawn by me, followed by fruits, water, flowers, and leaves that were generated by AI. Through the appreciation process, I also feel the joy of co-creation with AI.<br/></p><p id="be79fbaf-7a9d-4f83-8ba9-d78fffb97739" class="">
+</p><figure id="cf83c9da-53e3-45de-b55e-422ab956c9b4" class="image"><a href="%E3%80%8ALet%20us%20walk%20to%20find%20out%20what%20today%20means%20%E6%8A%8A%E5%96%9C%E6%AD%A1%E7%9A%84%E6%9E%9C%E5%AD%90%E3%80%81%E6%B0%B4%20af663de12a6c4a6aa7944274d087d4fc/Untitled%201.png"><img style="width:1728px" src="%E3%80%8ALet%20us%20walk%20to%20find%20out%20what%20today%20means%20%E6%8A%8A%E5%96%9C%E6%AD%A1%E7%9A%84%E6%9E%9C%E5%AD%90%E3%80%81%E6%B0%B4%20af663de12a6c4a6aa7944274d087d4fc/Untitled%201.png"/></a></figure><figure id="ba4b92d4-00ec-4634-a821-43707957f4b2" class="image"><a href="%E3%80%8ALet%20us%20walk%20to%20find%20out%20what%20today%20means%20%E6%8A%8A%E5%96%9C%E6%AD%A1%E7%9A%84%E6%9E%9C%E5%AD%90%E3%80%81%E6%B0%B4%20af663de12a6c4a6aa7944274d087d4fc/Untitled%202.png"><img style="width:1728px" src="%E3%80%8ALet%20us%20walk%20to%20find%20out%20what%20today%20means%20%E6%8A%8A%E5%96%9C%E6%AD%A1%E7%9A%84%E6%9E%9C%E5%AD%90%E3%80%81%E6%B0%B4%20af663de12a6c4a6aa7944274d087d4fc/Untitled%202.png"/></a></figure><p id="f8f05cc2-9717-4d4d-8049-17d4b5571331" class="">
+</p><p id="785e2649-becc-45f5-bd14-5a7eb6ee403e" class="">最初我是想讓AI幫我把所有東西都看成符號的，那可能也是一種新的繪畫方式可以嘗試，我也覺得與AI的合作中，讓手作成為凸顯的主軸可能比較有溫度，又或者只是我喜歡畫符號，我只是想保留我喜歡的事給自己作。<br/>Originally, I wanted AI to help me see everything as Asemic, which could be a new way of drawing to explore. However, in my collaboration with AI, I feel that emphasizing the handmade aspect is more warm and humanity. Perhaps it&#x27;s just because I enjoy drawing Asemic, and I simply want to keep doing what I love.<br/></p><p id="46c4e299-fc62-4bf6-a206-df2e5d45e9fb" class="">
+</p><figure id="05c4ab0f-3bdc-4421-9039-410dc69324bb" class="image"><a href="%E3%80%8ALet%20us%20walk%20to%20find%20out%20what%20today%20means%20%E6%8A%8A%E5%96%9C%E6%AD%A1%E7%9A%84%E6%9E%9C%E5%AD%90%E3%80%81%E6%B0%B4%20af663de12a6c4a6aa7944274d087d4fc/Untitled%203.png"><img style="width:1776px" src="%E3%80%8ALet%20us%20walk%20to%20find%20out%20what%20today%20means%20%E6%8A%8A%E5%96%9C%E6%AD%A1%E7%9A%84%E6%9E%9C%E5%AD%90%E3%80%81%E6%B0%B4%20af663de12a6c4a6aa7944274d087d4fc/Untitled%203.png"/></a></figure><figure id="9c6570dc-a79f-4dbb-9ad2-bb634b7b3e0a" class="image"><a href="%E3%80%8ALet%20us%20walk%20to%20find%20out%20what%20today%20means%20%E6%8A%8A%E5%96%9C%E6%AD%A1%E7%9A%84%E6%9E%9C%E5%AD%90%E3%80%81%E6%B0%B4%20af663de12a6c4a6aa7944274d087d4fc/Untitled%204.png"><img style="width:1728px" src="%E3%80%8ALet%20us%20walk%20to%20find%20out%20what%20today%20means%20%E6%8A%8A%E5%96%9C%E6%AD%A1%E7%9A%84%E6%9E%9C%E5%AD%90%E3%80%81%E6%B0%B4%20af663de12a6c4a6aa7944274d087d4fc/Untitled%204.png"/></a></figure><p id="11f7c02d-3fb7-4d0a-a07e-e970025850be" class="">
+</p><p id="fbec544c-056d-4151-ac07-4fdbd361649b" class="">在與AI的合作中，我喜歡畫符號，而AI擅長想像，我們可以各自做自己喜歡或擅長的事。最終產出的作品給我的感覺，像是生活中的事物揭示了它們真正的名字，而這些名字代表了我們與事物在共同生活中累積出來的經歷。<br/>In collaboration with AI, I enjoy drawing Asemic while AI excels at imagination, and we can each do what we like or are good at. The final artwork gives me the feeling that the things in life reveal their true names, and those names represent the experiences we accumulate together with them throughout our lives.<br/></p><p id="75971b5d-96bd-433c-843f-8b03b98e204f" class="">
+</p><figure id="4c9b1164-10ae-49c5-890c-8bd09ed9df3b" class="image"><a href="%E3%80%8ALet%20us%20walk%20to%20find%20out%20what%20today%20means%20%E6%8A%8A%E5%96%9C%E6%AD%A1%E7%9A%84%E6%9E%9C%E5%AD%90%E3%80%81%E6%B0%B4%20af663de12a6c4a6aa7944274d087d4fc/Untitled%206.png"><img style="width:1728px" src="%E3%80%8ALet%20us%20walk%20to%20find%20out%20what%20today%20means%20%E6%8A%8A%E5%96%9C%E6%AD%A1%E7%9A%84%E6%9E%9C%E5%AD%90%E3%80%81%E6%B0%B4%20af663de12a6c4a6aa7944274d087d4fc/Untitled%206.png"/></a></figure><p id="16b541b5-1adf-4121-8879-5a6222b4ab28" class="">
+</p><p id="9414592a-eda3-4ac9-a396-b00549ffc431" class="">天氣開始變熱了<br/>夏天就快要來了吧<br/></p><p id="1ae5dbe9-f53e-4a63-9770-852bd5bcb3b6" class="">不知道今年的夏天會是什麼樣子<br/>太陽很大的話要戴太陽眼鏡<br/>要開始整理冷氣<br/>幫植物多澆點水<br/>身體會變得黏黏的<br/></p><p id="3801b404-29ee-4946-930d-3d1fdc1e3005" class="">天氣會很熱的<br/>如果要散步的話要早睡早起<br/></p><p id="f2fb9bb4-0c09-4559-956d-830eba0a616b" class="">跟你一起散步很開心</p><p id="53b05983-c4d6-4f69-9fc7-4c71e1bb0020" class="">生活中的小事<br/>跟你一起經歷<br/>一起有了喜歡的樣子<br/>有了自己的名字<br/></p><p id="82ba8227-ddc6-4eb0-aab6-34d97f8729a8" class="">能跟你分享這一切真好</p><p id="8208ff82-0eb2-429b-be47-c05b137b4d9a" class="">@chouchiawei<br/>comes from Hualien<br/></p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

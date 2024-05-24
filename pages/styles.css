@@ -1,0 +1,19 @@
+body {
+    background-color: rgb(201,201,201);
+  }
+
+
+  .center-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; 或者您需要的高度 */
+}
+model-viewer {
+    max-width: 600px; /* 設置合適的最大寬度 */
+/* border: 2px solid #000; 設置框線的寬度、樣式和顏色 */
+    border-radius: 10px; /* 可選：設置圓角 */
+    padding: 10px; /* 可選：設置內邊距 */
+    box-shadow: 0 9px 9px rgba(0, 0, 0, 0.5); /* 可選：設置陰影效果 */
+background-color: #57575742;
+}
