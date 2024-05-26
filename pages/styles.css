@@ -110,6 +110,10 @@ a{
 	}
 }
 
+.title-a {
+	text-decoration: none;
+}
+
 .pdf-relative-link-path {
 	font-size: 80%;
 	color: #444;
@@ -212,15 +216,15 @@ img {
 }
 
 .column {
-	padding: 0 1em;
+	padding: 0 0.6em;
 }
 
 .column:first-child {
-	padding-left: 0;
+	/* padding-left: 0; */
 }
 
 .column:last-child {
-	padding-right: 0;
+	/* padding-right: 0; */
 }
 
 .table_of_contents-item {
